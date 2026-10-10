@@ -1,13 +1,13 @@
-import {Race,RIDERS,COLORS,WORLDS,POINTS} from './model.js?v=8';
+import {Race,RIDERS,COLORS,WORLDS,POINTS} from './model.js?v=9';
 const PORTRAIT=window.matchMedia('(max-width:650px)').matches;const WIDTH=PORTRAIT?600:1100,HEIGHT=PORTRAIT?720:600,LANE=PORTRAIT?65:50;
 const $=id=>document.getElementById(id);let race,world=0,points=Array(8).fill(0),running=false,paused=false,countdown=0,options,scene;
 $('worlds').innerHTML=WORLDS.map((w,i)=>`<li id="world-${i}">${w.name}</li>`).join('');
-function selectedPair(){return {rider:Number($('rider').value),mount:$('mount').value,color:$('color').value,manual:true};}
+function selectedPair(){return {rider:Number($('rider').value),mount:'Yoshi',color:$('color').value,manual:true};}
 function changePair(){const selected=selectedPair();if(options)options={...options,...selected};if(!race)return;const fresh=new Race(selected).racers[0];for(const key of ['name','mount','color','jumpDuration','top','accel','recovery','bonus'])race.racers[0][key]=fresh[key];}
 ['rider','mount','color'].forEach(id=>$(id).onchange=changePair);
 function settings(disabled){['start'].forEach(id=>$(id).disabled=disabled);}
 function setup(){race=new Race(options?{...options,world}:{world});$('track').textContent=WORLDS[world].name;$('round').textContent=`ROUND 0${world+1} / 03`;WORLDS.forEach((_,i)=>$(`world-${i}`).classList.toggle('active',i===world));$('birthday').hidden=true;$('results').hidden=true;paused=false;countdown=3;running=true;settings(true);$('pause').disabled=false;$('pause').textContent='PAUSE';}
-$('start').onclick=()=>{world=0;points.fill(0);options={rider:Number($('rider').value),mount:$('mount').value,color:$('color').value,manual:true};setup();};
+$('start').onclick=()=>{world=0;points.fill(0);options={rider:Number($('rider').value),mount:'Yoshi',color:$('color').value,manual:true};setup();document.querySelector?.('.arena')?.scrollIntoView({behavior:'smooth',block:'start'});};
 $('next').onclick=()=>{if(world<2){world++;setup();}};
 $('restart').onclick=()=>{running=false;world=0;points.fill(0);options=null;settings(false);$('birthday').hidden=true;$('results').hidden=true;$('pause').disabled=true;race=new Race({manual:true});$('track').textContent=WORLDS[0].name;$('round').textContent='ROUND 01 / 03';WORLDS.forEach((_,i)=>$(`world-${i}`).classList.toggle('active',i===0));$('status').textContent='READY AT THE GATE';};
 function togglePause(){if(!running)return;paused=!paused;$('pause').textContent=paused?'RESUME':'PAUSE';}

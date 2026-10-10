@@ -83,3 +83,5 @@ Levels 3 and 5 give player one a flashing star pickup at halfway distance, grant
 Three racing levels only: Yoshi’s Island, Underground Caverns and Haunted Forest. After race three, HAPPY BIRTHDAY JOE!!! appears across the race view and in a wide celebration banner above the final podium. Rendering now uses full-color graphics with antialiasing and device-resolution scaling up to 3× for a sharper 32-bit-style presentation. This remains the same browser engine; “32-bit” describes the visual style, rather than a console hardware mode.
 
 Phone controls are fixed above the bottom safe area: Tap to Run is centered horizontally, with Boost immediately to its right. Portrait play requires no rotation.
+
+Yoshi is now the only racing mount. Start Championship automatically scrolls the page to the race view, with the fixed phone touch controls immediately available.

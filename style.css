@@ -15,3 +15,5 @@
  body{padding-bottom:calc(100px + env(safe-area-inset-bottom));}
  select{font-size:16px;} .setup{position:relative;z-index:2;}
 }
+
+.arena{scroll-margin-top:10px}html{scroll-behavior:smooth}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
