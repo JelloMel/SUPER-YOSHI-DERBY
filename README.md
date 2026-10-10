@@ -87,3 +87,5 @@ Phone controls are fixed above the bottom safe area: Tap to Run is centered hori
 Yoshi is now the only racing mount. Start Championship automatically scrolls the page to the race view, with the fixed phone touch controls immediately available.
 
 Latest visual edition: enhanced shading and high-density rendering up to 4×, with a full-width birthday overlay across the final winner stage. Level one provides five boosts; levels two and three provide four. The final-level star now multiplies target speed by 2.4×. “64-bit” describes the requested presentation direction, not browser hardware or an actual console format.
+
+Every level now includes exactly one random opponent falling off their Yoshi. A short non-graphic cartoon animation shows the fall, blue splash, and smoke/star burst. The rider is disqualified and receives no points; their riderless Yoshi continues racing.

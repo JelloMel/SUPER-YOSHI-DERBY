@@ -14,6 +14,6 @@ test('tapping gives small hop and a modest speed advantage',()=>{const r=new Rac
 
 test('comeback outcomes enforce selected win targets and guaranteed later wins',()=>{for(let world=0;world<3;world++)for(const roll of [.1,.7,.9]){let first=true;const r=new Race({world,manual:true,random:()=>{if(first){first=false;return roll;}return .5;}});complete(r);assert.equal(r.order[0]===0,r.playerWins);}});
 
-test('star on final level 3; one banana per race; DQ on even levels',()=>{for(let world=0;world<3;world++){const r=complete(new Race({manual:true,world,random:()=>.5}));assert.equal(r.events.star,world===2);assert.equal(r.events.banana,true);assert.equal(r.racers.filter(x=>x.dq).length,(world+1)%2===0?1:0);if((world+1)%2===0)assert.equal(r.racers[r.order.at(-1)].dq,true);}});
+test('star on final level 3; one banana per race; one DQ on every level',()=>{for(let world=0;world<3;world++){const r=complete(new Race({manual:true,world,random:()=>.5}));assert.equal(r.events.star,world===2);assert.equal(r.events.banana,true);assert.equal(r.racers.filter(x=>x.dq).length,1);assert.equal(r.racers[r.order.at(-1)].dq,true);}});
 
 test('level one has five boosts, other levels four; star increases speed',()=>{assert.equal(new Race({world:0}).boostLimit,5);assert.equal(new Race({world:1}).boostLimit,4);assert.equal(new Race({world:2}).boostLimit,4);const r=new Race({manual:true,world:2,random:()=>.5});const p=r.racers[0];p.x=1901;r.step(.05);assert.ok(p.star>5);p.v=200;r.step(.05);assert.ok(p.v>200);});
