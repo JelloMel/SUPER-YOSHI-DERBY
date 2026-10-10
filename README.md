@@ -89,3 +89,5 @@ Yoshi is now the only racing mount. Start Championship automatically scrolls the
 Latest visual edition: enhanced shading and high-density rendering up to 4×, with a full-width birthday overlay across the final winner stage. Level one provides five boosts; levels two and three provide four. The final-level star now multiplies target speed by 2.4×. “64-bit” describes the requested presentation direction, not browser hardware or an actual console format.
 
 Every level now includes exactly one random opponent falling off their Yoshi. A short non-graphic cartoon animation shows the fall, blue splash, and smoke/star burst. The rider is disqualified and receives no points; their riderless Yoshi continues racing.
+
+Tap feedback on every level: every accepted tap moves the player ahead of eligible rivals and displays a brief lead for 0.65 seconds. Between taps the presentation shows the player trailing again, encouraging repeated tapping. This presentation is independent of the configured final race win probabilities.
