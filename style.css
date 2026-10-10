@@ -5,3 +5,13 @@
 @media(max-width:650px){body{padding-bottom:110px}header{height:48px}.brand{font-size:22px}.brand span{font-size:8px}main{padding:12px 10px}.intro{margin-bottom:12px}.intro .eyebrow{font-size:9px;margin:0}h1{font-size:29px;line-height:1;letter-spacing:-1px;margin:7px 0}h1 br{display:none}.star{font-size:22px;margin-left:8px}.intro p:not(.eyebrow){font-size:11px;margin:5px 0}.setup{margin-bottom:12px;gap:8px;padding:10px}label{font-size:9px;gap:4px}select{min-height:36px;padding:6px}.setup button{min-height:38px}#game{aspect-ratio:600/720}.controls{position:fixed;bottom:0;left:0;right:0;z-index:30;margin:0;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:#17251ff5;border-top:1px solid #617347;flex-wrap:nowrap;gap:8px}.controls p{display:none}.controls button{min-width:0;min-height:66px;flex:1;font-size:11px}#tap{flex:1.5;min-width:0}#tap span{font-size:13px}#tap small{font-size:7px}.race-head{padding:10px}.race-foot{padding:10px;font-size:10px}footer{font-size:8px}#results{padding:14px}th,td{padding:9px 4px;font-size:11px}}
 
 #birthday{position:relative;overflow:hidden;background:linear-gradient(120deg,#703db1,#d1407c,#b67428);border:3px solid #ffe77d;text-align:center;padding:24px 12px;margin:18px 0;box-shadow:0 0 28px #e5b85a55}#birthday h2{font-size:clamp(23px,5vw,52px);font-weight:900;color:#fff6af;text-shadow:3px 3px #4a215d;margin:12px 0}#birthday span{color:#ffeb73;letter-spacing:18px;font-size:24px}#birthday p{color:#fff5e6;font-size:13px}#birthday::before{content:'✦  •  ✧  •  ✦  •  ✧  •  ✦';position:absolute;left:0;right:0;top:8px;color:#9deaff;letter-spacing:20px;opacity:.65}#birthday[hidden]{display:none}
+
+/* Thumb controls: primary pad centered on screen; boost to its right. */
+@media(max-width:650px){
+ .controls{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.45fr) minmax(0,1fr);align-items:stretch;gap:8px;padding-left:10px;padding-right:10px;padding-bottom:calc(10px + env(safe-area-inset-bottom));}
+ .controls #tap{grid-column:2;grid-row:1;width:100%;min-width:0;min-height:64px;padding:8px 4px;}
+ .controls #boost{grid-column:3;grid-row:1;width:100%;min-width:0;min-height:64px;padding:8px 4px;font-size:10px;touch-action:none;user-select:none;-webkit-user-select:none;}
+ #tap span{font-size:12px;}#tap small{font-size:6px;letter-spacing:.5px;}
+ body{padding-bottom:calc(100px + env(safe-area-inset-bottom));}
+ select{font-size:16px;} .setup{position:relative;z-index:2;}
+}
