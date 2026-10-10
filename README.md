@@ -1,6 +1,6 @@
 # Super Yoshi Derby
 
-Unofficial, noncommercial Nintendo fan-game prototype. Eight racers, two mount types, eleven selectable riders, five championship tracks. Original procedural pixel artwork; no ripped game sprites, music, or reference-image pixels are included.
+Unofficial, noncommercial Nintendo fan-game prototype. Eight racers, two mount types, eleven selectable riders, three championship tracks. Original procedural pixel artwork; no ripped game sprites, music, or reference-image pixels are included.
 
 **Play online:** https://jellomel.github.io/SUPER-YOSHI-DERBY/
 
@@ -13,7 +13,7 @@ Extract the package. From this directory run `python3 -m http.server 8080`, then
 1. Choose a rider, Yoshi or Koopa, and color.
 2. Start the championship. The chosen pair is racer ★ in lane one.
 3. Your mount accelerates automatically; you tap to accelerate and time jumping boosts.
-4. Continue through five worlds. Points per finishing position are 15, 12, 10, 8, 6, 4, 2, 1. Highest total wins. Ties use the last race finish order.
+4. Continue through three worlds. Points per finishing position are 15, 12, 10, 8, 6, 4, 2, 1. Highest total wins. Ties use the last race finish order.
 5. New Championship returns to selection.
 
 ## Controls
@@ -53,7 +53,7 @@ Original procedural art now adds saddle straps, shading, seams, facial details, 
 - `src/game.js`: Phaser renderer and UI/championship flow.
 - `style.css`, `index.html`: responsive shell.
 - `vendor/phaser.min.js`: pinned Phaser 3.90.0, MIT licensed; see `vendor/LICENSE.phaser.txt`.
-- `tests/`: simulation, mount/rider matrix, randomized winners, collision recovery, mocked rendering and complete five-race UI flow.
+- `tests/`: simulation, mount/rider matrix, randomized winners, collision recovery, mocked rendering and complete three-race UI flow.
 - `.github/workflows/pages.yml`: tested static deployment to GitHub Pages from `main`.
 
 ## Deployment, pending owner authorization
@@ -64,7 +64,7 @@ After authorization, create or reuse the repository, push these files on `main`,
 
 ## Verification and remaining polish
 
-Twelve automated tests pass, including 40 randomized races and a complete mocked five-world UI flow. Browser rendering, real keyboard/touch input and mobile performance have NOT been verified: the permitted browser QA capability is unavailable in the current environment. These checks remain required before public release.
+Twelve automated tests pass, including 40 randomized races and a complete mocked three-world UI flow. Browser rendering, real keyboard/touch input and mobile performance have NOT been verified: the permitted browser QA capability is unavailable in the current environment. These checks remain required before public release.
 
 World hazards currently use lane obstacles themed as logs, rocks, ghosts, Thwomps and stars. Falling-rock timing, moving Thwomps, traversable cave tunnels and surprise ghost behavior are future enhancements. Artwork is a compact procedural pixel interpretation, rather than an extensive hand-drawn sprite set. No audio is included. Offscreen trailing racers are clamped to the left edge to keep all eight visible; rankings use actual race distance.
 
@@ -77,3 +77,7 @@ An original-character alternative can retain the gameplay with renamed riders, o
 ## Race events
 
 Levels 3 and 5 give player one a flashing star pickup at halfway distance, granting six seconds of visible speed and hazard protection. Each race gives one random opponent a banana slowdown. Levels 2 and 4 also disqualify one opponent after a rider fall; its riderless mount keeps racing ahead, but receives no championship points and appears last in the results as DISQUALIFIED.
+
+## Birthday edition
+
+Three racing levels only: Yoshi’s Island, Underground Caverns and Haunted Forest. After race three, HAPPY BIRTHDAY JOE!!! appears across the race view and in a wide celebration banner above the final podium. Rendering now uses full-color graphics with antialiasing and device-resolution scaling up to 3× for a sharper 32-bit-style presentation. This remains the same browser engine; “32-bit” describes the visual style, rather than a console hardware mode.
