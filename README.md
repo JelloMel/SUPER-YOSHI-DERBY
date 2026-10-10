@@ -31,7 +31,7 @@ Keyboard race shortcuts apply when focus is outside form controls. Click the tra
 
 On phones the game uses a taller 600 × 720 logical canvas so all eight lanes remain visible. A compact touchpad stays at the bottom above the safe area, alongside Boost. Tap **TAP TO RUN** repeatedly for extra mount speed. Each tap adds speed up to a cap; speed decays when you stop tapping. Taps are limited to one per 120 ms. Both mount types support this control. All races are participant-controlled. Rider, mount and color selectors stay usable and update your pair immediately.
 
-Boost immediately surges forward at 1.9× speed and automatically hops over hazards for 3 seconds. Recharge takes 5 seconds after the boost ends. There is no separate Jump button. Tapping adds up to 65 extra speed units, giving active players a strong advantage.
+Boost gives a modest 1.25× surge for 1 second, with a 5-second recharge afterward. You get only two boosts per race; the button shows remaining uses. Every accepted Tap to Run press adds a small visual hop and speed, capped at 22 extra speed units. Tapping hops are cosmetic; use a boost to clear hazards.
 
 ## Features
 
