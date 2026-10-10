@@ -10,9 +10,9 @@ Unofficial, noncommercial Nintendo fan-game prototype. Eight racers, two mount t
 
 Extract the package. From this directory run `python3 -m http.server 8080`, then open http://localhost:8080. Use a local HTTP server because the game uses JavaScript modules. Phaser 3.90.0 is bundled, so playing does not require a CDN, server backend, account, or paid service.
 
-1. Choose a rider, Yoshi or Koopa, color, and mode.
+1. Choose a rider, Yoshi or Koopa, and color.
 2. Start the championship. The chosen pair is racer ★ in lane one.
-3. Spectator mode automatically controls all eight competitors. In manual mode your mount accelerates automatically; you tap to accelerate and time jumping boosts.
+3. Your mount accelerates automatically; you tap to accelerate and time jumping boosts.
 4. Continue through five worlds. Points per finishing position are 15, 12, 10, 8, 6, 4, 2, 1. Highest total wins. Ties use the last race finish order.
 5. New Championship returns to selection.
 
@@ -29,7 +29,7 @@ Keyboard race shortcuts apply when focus is outside form controls. Click the tra
 
 ## Phone portrait play
 
-On phones the game uses a taller 600 × 720 logical canvas so all eight lanes remain visible. A compact touchpad stays at the bottom above the safe area, alongside Boost. Choose Manual Racing and tap **TAP TO RUN** repeatedly for extra mount speed. Each tap adds speed up to a cap; speed decays when you stop tapping. Taps are limited to one per 120 ms. Both mount types support this control. Spectator mode remains automatic.
+On phones the game uses a taller 600 × 720 logical canvas so all eight lanes remain visible. A compact touchpad stays at the bottom above the safe area, alongside Boost. Tap **TAP TO RUN** repeatedly for extra mount speed. Each tap adds speed up to a cap; speed decays when you stop tapping. Taps are limited to one per 120 ms. Both mount types support this control. All races are participant-controlled. Rider, mount and color selectors stay usable and update your pair immediately.
 
 Boost immediately surges forward at 1.9× speed and automatically hops over hazards for 3 seconds. Recharge takes 5 seconds after the boost ends. There is no separate Jump button. Tapping adds up to 65 extra speed units, giving active players a strong advantage.
 
@@ -39,7 +39,7 @@ Boost immediately surges forward at 1.9× speed and automatically hops over haza
 - Every rider can use either mount; six colors; larger artwork for heavy riders.
 - Eight visible lanes, start gates, scrolling environment, running animation, jump arc, boost trails, changing positions, finish line and results.
 - Yoshi acceleration and longer jump duration; Koopa endurance, boost recharge and faster collision recovery. Rider choice adds a small deterministic speed bonus.
-- Randomized pacing, AI decisions and obstacle placement; no predetermined winner.
+- Participant-only gameplay with seven computer opponents. Randomized pacing, AI decisions and obstacle placement; no predetermined winner.
 - Yoshi’s Island, Underground Caverns, Haunted Forest, Bowser’s Castle, Rainbow Road; longer tracks, denser hazards and tougher AI obstacle checks.
 - Responsive interface, touch controls, visibility pause, standings and championship podium.
 
