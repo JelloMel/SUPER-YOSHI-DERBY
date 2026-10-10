@@ -2,7 +2,7 @@
 
 Unofficial, noncommercial Nintendo fan-game prototype. Eight racers, two mount types, eleven selectable riders, five championship tracks. Original procedural pixel artwork; no ripped game sprites, music, or reference-image pixels are included.
 
-**Intended website (NOT DEPLOYED OR VERIFIED):** https://jellomel.github.io/SUPER-YOSHI-DERBY/
+**Play online:** https://jellomel.github.io/SUPER-YOSHI-DERBY/
 
 **Proposed repository:** https://github.com/jellomel/SUPER-YOSHI-DERBY
 
@@ -12,7 +12,7 @@ Extract the package. From this directory run `python3 -m http.server 8080`, then
 
 1. Choose a rider, Yoshi or Koopa, color, and mode.
 2. Start the championship. The chosen pair is racer ★ in lane one.
-3. Spectator mode automatically controls all eight competitors. In manual mode your mount accelerates automatically; you time jumps and boosts.
+3. Spectator mode automatically controls all eight competitors. In manual mode your mount accelerates automatically; you tap to accelerate and time jumping boosts.
 4. Continue through five worlds. Points per finishing position are 15, 12, 10, 8, 6, 4, 2, 1. Highest total wins. Ties use the last race finish order.
 5. New Championship returns to selection.
 
@@ -20,8 +20,8 @@ Extract the package. From this directory run `python3 -m http.server 8080`, then
 
 | Action | Keyboard | Touch |
 | --- | --- | --- |
-| Accelerate | — | Tap to Run pad (manual mode) |
-| Jump | Space or Up | Jump button |
+| Accelerate | Space or Up | Tap to Run pad (manual mode) |
+
 | Boost | Shift or X | Boost button |
 | Pause / resume | P | Pause button |
 
@@ -29,7 +29,9 @@ Keyboard race shortcuts apply when focus is outside form controls. Click the tra
 
 ## Phone portrait play
 
-On phones the game uses a taller 600 × 720 logical canvas so all eight lanes remain visible. A compact touchpad stays at the bottom above the safe area, alongside Jump and Boost. Choose Manual Racing and tap **TAP TO RUN** repeatedly for extra mount speed. Each tap adds speed up to a cap; speed decays when you stop tapping. Taps are limited to one per 120 ms. Both mount types support this control. Spectator mode remains automatic.
+On phones the game uses a taller 600 × 720 logical canvas so all eight lanes remain visible. A compact touchpad stays at the bottom above the safe area, alongside Boost. Choose Manual Racing and tap **TAP TO RUN** repeatedly for extra mount speed. Each tap adds speed up to a cap; speed decays when you stop tapping. Taps are limited to one per 120 ms. Both mount types support this control. Spectator mode remains automatic.
+
+Boost immediately surges forward at 1.9× speed and automatically hops over hazards for 3 seconds. Recharge takes 5 seconds after the boost ends. There is no separate Jump button. Tapping adds up to 65 extra speed units, giving active players a strong advantage.
 
 ## Features
 
@@ -54,13 +56,13 @@ On phones the game uses a taller 600 × 720 logical canvas so all eight lanes re
 
 ## Deployment, pending owner authorization
 
-The owner authorized uploading and publication. Public deployment remains unverified until the Pages workflow completes and the website is checked.
+No GitHub writes or publication have occurred. The repository lookup returned 404, which can also mean lack of access to an existing private repository. Recheck access before creation.
 
 After authorization, create or reuse the repository, push these files on `main`, select **Settings → Pages → Source: GitHub Actions**, and run the included workflow. Verify the public URL, engine loading, race completion, manual controls and mobile layout before marking deployment complete. The workflow uses relative asset paths for project Pages hosting.
 
 ## Verification and remaining polish
 
-Seven automated tests pass, including 40 randomized races and a complete mocked five-world UI flow. Browser rendering, real keyboard/touch input and mobile performance have NOT been verified: the permitted browser QA capability is unavailable in the current environment. These checks remain required before public release.
+Ten automated tests pass, including 40 randomized races and a complete mocked five-world UI flow. Browser rendering, real keyboard/touch input and mobile performance have NOT been verified: the permitted browser QA capability is unavailable in the current environment. These checks remain required before public release.
 
 World hazards currently use lane obstacles themed as logs, rocks, ghosts, Thwomps and stars. Falling-rock timing, moving Thwomps, traversable cave tunnels and surprise ghost behavior are future enhancements. Artwork is a compact procedural pixel interpretation, rather than an extensive hand-drawn sprite set. No audio is included. Offscreen trailing racers are clamped to the left edge to keep all eight visible; rankings use actual race distance.
 
