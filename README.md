@@ -31,7 +31,9 @@ Keyboard race shortcuts apply when focus is outside form controls. Click the tra
 
 On phones the game uses a taller 600 × 720 logical canvas so all eight lanes remain visible. A compact touchpad stays at the bottom above the safe area, alongside Boost. Tap **TAP TO RUN** repeatedly for extra mount speed. Each tap adds speed up to a cap; speed decays when you stop tapping. Taps are limited to one per 120 ms. Both mount types support this control. All races are participant-controlled. Rider, mount and color selectors stay usable and update your pair immediately.
 
-Boost gives a modest 1.25× surge for 1 second, with a 5-second recharge afterward. You get only two boosts per race; the button shows remaining uses. Every accepted Tap to Run press adds a small visual hop and speed, capped at 22 extra speed units. Well-timed tapping hops can clear hazards near the peak of the hop; boosts protect you throughout their one-second duration.
+Boost gives a modest 1.25× surge for 2 seconds, with a 3-second recharge afterward. You get four boosts per race; the button shows remaining uses. Every accepted Tap to Run press adds a small visual hop and speed, capped at 22 extra speed units. Well-timed tapping hops can clear hazards near the peak of the hop; boosts protect you throughout their two-second duration.
+
+Original procedural art now adds saddle straps, shading, seams, facial details, shoes and character accessories for a richer 16-bit-style presentation.
 
 ## Features
 
@@ -39,7 +41,7 @@ Boost gives a modest 1.25× surge for 1 second, with a 5-second recharge afterwa
 - Every rider can use either mount; six colors; larger artwork for heavy riders.
 - Eight visible lanes, start gates, scrolling environment, running animation, jump arc, boost trails, changing positions, finish line and results.
 - Yoshi acceleration and longer jump duration; Koopa endurance, boost recharge and faster collision recovery. Rider choice adds a small deterministic speed bonus.
-- Participant-only gameplay with seven computer opponents. Randomized pacing, AI decisions and obstacle placement; no predetermined winner.
+- Participant-only gameplay with seven computer opponents. Scripted comeback outcomes: 75% player win chance in world one, 65% in world two, guaranteed player wins in worlds three through five. Opponents lead early; player comeback begins in the final 30%. Tapping and boosts still affect movement.
 - Yoshi’s Island, Underground Caverns, Haunted Forest, Bowser’s Castle, Rainbow Road; longer tracks, denser hazards and tougher AI obstacle checks.
 - Responsive interface, touch controls, visibility pause, standings and championship podium.
 
@@ -62,7 +64,7 @@ After authorization, create or reuse the repository, push these files on `main`,
 
 ## Verification and remaining polish
 
-Ten automated tests pass, including 40 randomized races and a complete mocked five-world UI flow. Browser rendering, real keyboard/touch input and mobile performance have NOT been verified: the permitted browser QA capability is unavailable in the current environment. These checks remain required before public release.
+Eleven automated tests pass, including 40 randomized races and a complete mocked five-world UI flow. Browser rendering, real keyboard/touch input and mobile performance have NOT been verified: the permitted browser QA capability is unavailable in the current environment. These checks remain required before public release.
 
 World hazards currently use lane obstacles themed as logs, rocks, ghosts, Thwomps and stars. Falling-rock timing, moving Thwomps, traversable cave tunnels and surprise ghost behavior are future enhancements. Artwork is a compact procedural pixel interpretation, rather than an extensive hand-drawn sprite set. No audio is included. Offscreen trailing racers are clamped to the left edge to keep all eight visible; rankings use actual race distance.
 
