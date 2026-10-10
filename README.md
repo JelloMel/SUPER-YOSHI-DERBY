@@ -64,7 +64,7 @@ After authorization, create or reuse the repository, push these files on `main`,
 
 ## Verification and remaining polish
 
-Eleven automated tests pass, including 40 randomized races and a complete mocked five-world UI flow. Browser rendering, real keyboard/touch input and mobile performance have NOT been verified: the permitted browser QA capability is unavailable in the current environment. These checks remain required before public release.
+Twelve automated tests pass, including 40 randomized races and a complete mocked five-world UI flow. Browser rendering, real keyboard/touch input and mobile performance have NOT been verified: the permitted browser QA capability is unavailable in the current environment. These checks remain required before public release.
 
 World hazards currently use lane obstacles themed as logs, rocks, ghosts, Thwomps and stars. Falling-rock timing, moving Thwomps, traversable cave tunnels and surprise ghost behavior are future enhancements. Artwork is a compact procedural pixel interpretation, rather than an extensive hand-drawn sprite set. No audio is included. Offscreen trailing racers are clamped to the left edge to keep all eight visible; rankings use actual race distance.
 
@@ -73,3 +73,7 @@ World hazards currently use lane obstacles themed as logs, rocks, ghosts, Thwomp
 Nintendo character names and recognizable designs can raise copyright and trademark concerns even when the project is free, noncommercial and uses newly drawn assets. A disclaimer does not grant permission, and the project may receive a takedown request. No Nintendo rights are licensed here. Seek qualified advice or rights-holder permission for publication decisions.
 
 An original-character alternative can retain the gameplay with renamed riders, original dinosaur/turtle mounts, original environments and a new title such as **Shell & Saddle Derby**, removing Nintendo-specific designs and branding. Choose this option before public deployment if desired.
+
+## Race events
+
+Levels 3 and 5 give player one a flashing star pickup at halfway distance, granting six seconds of visible speed and hazard protection. Each race gives one random opponent a banana slowdown. Levels 2 and 4 also disqualify one opponent after a rider fall; its riderless mount keeps racing ahead, but receives no championship points and appears last in the results as DISQUALIFIED.
