@@ -93,3 +93,5 @@ Every level now includes exactly one random opponent falling off their Yoshi. A 
 Tap feedback on every level: every accepted tap moves the player ahead of eligible rivals and displays a brief lead for 0.65 seconds. Between taps the presentation shows the player trailing again, encouraging repeated tapping. This presentation is independent of the configured final race win probabilities.
 
 At the finish of every race, the page automatically scrolls to the completed results, standings and times. Phone result rows are compact so the Next World button is easier to reach.
+
+Race completion fix: taps never move the player backwards near the finish, and finish-line holding has been removed so all racers cross normally. Boost allowances are now six on Island and five on Caverns and Forest (two seconds each, three-second recharge).

@@ -1,4 +1,4 @@
-import {Race,RIDERS,COLORS,WORLDS,POINTS} from './model.js?v=13';
+import {Race,RIDERS,COLORS,WORLDS,POINTS} from './model.js?v=14';
 const PORTRAIT=window.matchMedia('(max-width:650px)').matches;const WIDTH=PORTRAIT?600:1100,HEIGHT=PORTRAIT?720:600,LANE=PORTRAIT?65:50;
 const $=id=>document.getElementById(id);let race,world=0,points=Array(8).fill(0),running=false,paused=false,countdown=0,options,scene;
 $('worlds').innerHTML=WORLDS.map((w,i)=>`<li id="world-${i}">${w.name}</li>`).join('');
