@@ -91,3 +91,5 @@ Latest visual edition: enhanced shading and high-density rendering up to 4×, wi
 Every level now includes exactly one random opponent falling off their Yoshi. A short non-graphic cartoon animation shows the fall, blue splash, and smoke/star burst. The rider is disqualified and receives no points; their riderless Yoshi continues racing.
 
 Tap feedback on every level: every accepted tap moves the player ahead of eligible rivals and displays a brief lead for 0.65 seconds. Between taps the presentation shows the player trailing again, encouraging repeated tapping. This presentation is independent of the configured final race win probabilities.
+
+At the finish of every race, the page automatically scrolls to the completed results, standings and times. Phone result rows are compact so the Next World button is easier to reach.
